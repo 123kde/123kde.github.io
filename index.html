@@ -1,0 +1,240 @@
+<!--
+  Name: Kade Hasenfus
+  Email Address: Kade_Hasenfus@student.uml.edu
+  Affliation: University of Massachusetts Lowell Computer Science Major
+  File: cs.uml.edu/~khasenfu/
+  COMP.4610-201 (91.61) GUI Programming I Assignment: Bootstrap
+  Copyright © October 20th 2020 by Kade Hasenfus. All rights reserved. May be
+  freely copied or excerpted for educational purposes with credit to the author.
+  Sources: https://www.w3schools.com/, https://getbootstrap.com/
+-->
+<!DOCTYPE html>
+<html>
+    <!-- head with appropriate info -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel = "stylesheet" type = "text/css" href = "css/index.css">
+        <title>
+            GUI Assignments Directory
+        </title>
+    </head>
+    <!-- body begins -->
+    <body>
+        <div class="container">
+      <!-- nav bar in header section -->
+            <header>
+                <div class="fixed-top">
+                    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <!-- navbar label -->
+                        <a class="navbar-brand" href="#">GUI Assignments Directory</a>
+
+  <!-- Toggler/collapsibe Button -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+  <!-- Navbar links -->
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link" href="#homeSection">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#aboutPageSection">About This Page</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#aboutMeSection">About Me</a></li>
+                                <li class="nav-item"><a class="nav-link" href="https://www.uml.edu/about/" target="_blank">About UMass Lowell</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#directorySection">Assignment Directory</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#petSection">Pet Slideshow</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <div class="container" id="mainContainer">
+        <!-- landing section begins -->
+        <section id="homeSection">
+          <div class="jumbotron jumbotron-fluid bg-cover" id="landing">
+            <h1>
+                Welcome to the Online Portfolio of Kade Hasenfus
+            </h1>
+          </div>
+        </section>
+        <!-- about page section begins -->
+        <section id="aboutPageSection">
+          <br>
+          <br>
+            <div class="jumbotron jumbotron-fluid bg-cover" id="aboutPage">
+                <h2>
+                    About this Page
+                </h2>
+                <p>
+                    This page is currently serving both as a sort of portfolio for myself (Kade
+                    Hasenfus) as well as a directory for all of my future homework assignments
+                    in my GUI Programming I course here at UMass Lowell.
+                </p>
+                <p>
+                  This is the second iteration of this page, or 'Portfolio 2.0.' It has been enhanced
+                  from its previous design, which was made purely with CSS. This version of the site
+                  is made using bootstrap 4 and some light CSS adjustments. Doing this was Homework 4,
+                  and the original site was Homework 2, so you can access the original 1.0 site from
+                  the directory section.
+                </p>
+
+            </div>
+        </section>
+        <!-- about me section begins -->
+        <section id="aboutMeSection">
+          <br>
+          <br>
+          <div class="jumbotron jumbotron-fluid bg-cover" id="aboutMe">
+                <div class="aboutMe">
+                    <h2>
+                        About Me
+                    </h2>
+                    <p>
+                        Hi! My name is Kade Hasenfus, and I am currently a senior at UMass Lowell
+                        majoring in Computer Science. I first got interested in the field of
+                        Computer Science at a young age, when I first started gaining interest in
+                        video games. As I grew older and became even more involved with video games
+                        and consequently Computer Science, I developed an interest in Computer
+                        Science all on its own. Beginning with hosting a Minecraft server on
+                        my laptop for friends in 2010, I have since been expanding my knowledge
+                        in my free time in areas such as networking and systems administration,
+                        to experience with hardware both in the consumer and enterprise space.
+                        Currently, I host numerous game servers and other services on a Dell
+                        Poweredge R710 I aquired second hand from ebay.
+                    </p>
+                    <p>
+                    As for my interests outside the field, I enjoy biking, swimming, hiking,
+                    wakeboarding, target shooting, and skeet shooting, just to name a few.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- directory section begins -->
+        <section id="directorySection">
+          <br>
+          <br>
+          <div class="jumbotron jumbotron-fluid bg-cover" id="directoryJumbo">
+              <aside class="directory">
+                  <h2>
+                      Directory
+                  </h2>
+                  <h4>
+                      My assignments so far
+                  </h4>
+                  <!-- a row of cards, each card leads to an assignment -->
+                  <div class="row">
+                      <div class="col-sm">
+                        <div class="card">
+                            <img class="card-img-top" src="./images/folder.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Homework 2</h5>
+                                <a href="https://cs.uml.edu/~khasenfu/HW2/index.html" target="_blank" class="btn btn-primary">Open</a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-sm">
+                        <div class="card">
+                            <img class="card-img-top" src="./images/folder.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Homework 3</h5>
+                                <a href="https://cs.uml.edu/~khasenfu/HW3/index.html" target="_blank" class="btn btn-primary">Open</a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col-sm">
+                        <div class="card">
+                            <img class="card-img-top" src="./images/folder.png" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Homework 4</h5>
+                                <a href="#" class="btn btn-primary">Open</a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+              </aside>
+          </div>
+        </section>
+        <!-- pet section begins -->
+        <section id="petSection">
+          <div class="jumbotron jumbotron-fluid bg-cover" id="pets">
+            <h2>
+                My Adorable Pets
+            </h2>
+            <br>
+            <p>Below I have included a slideshow of some pictures of my pets</p>
+            <!-- carosel slideshow of my pets, followed by a short bio for each of them -->
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="./images/Pawz1.jpg" alt="Picture of Pawz">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Sky1.jpg" alt="Picture of Sky">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Manson1.jpg" alt="Picture of Manson">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Blizzard1.jpg" alt="Picture of Blizzard">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Pawz2.jpg" alt="Picture of Pawz">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Sky2.jpg" alt="Picture of Sky">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Manson2.jpg" alt="Picture of Manson">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="./images/Blizzard2.jpg" alt="Picture of Blizzard">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <p>The big fat black cat's name is Pawz, named after the fact that he is a chimera cat with mitten paws.
+              He loves people and cuddling more than anything, but absolutely <i>HATES</i> the dog, Sky. He is also a big scaredy-cat.
+            </p>
+            <p>The dog's name is Sky, named after her sky blue eyes (because of this we call her skyballs sometimes (sounds like eyeballs)). She essentially has 2 modes;
+              one where she is 'off' and will cuddle you for hours, and the other mode is hyperactivity turned up to 11 - she loves to run and bite and chew anything she can get
+              her snout on.
+            </p>
+            <p>The adorable little cat that looks almost like an ocelot is named Manson. After Charles Manson. Why, you might ask? Because despite his charming looks and occasionaly his demeanor,
+              he is actually incredibly aggressive, frequently kills bugs and rodents, and he <i>will</i> bite your face off.
+            </p>
+            <p>Finally, the black and white kitty cat's name is Blizzard. Blizzard is an incredibly relaxed cat. He loves being pet under his neck, but otherwise doesn't
+              care much for cuddles or being held, and can usually be found hiding somewhere in the house, keeping to himself.
+            </p>
+          </div>
+        </section>
+        <!-- CSS Validation -->
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+            </a>
+        </p>
+        <!-- copyright footer -->
+        <footer>
+            Copyright &copy; 2020 Kade Hasenfus, All rights reserved
+            <br>
+            <a href="mailto:Kade_Hasenfus@student.uml.edu">Kade_Hasenfus@student.uml.edu</a>
+        </footer>
+        <!-- script bundle for bootstrap -->
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    </body>
+</html>
