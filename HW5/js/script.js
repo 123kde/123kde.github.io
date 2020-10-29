@@ -13,6 +13,10 @@ const subButton = document.getElementById("submitButton");
 const log = document.getElementById("messageOut");
 const table = document.querySelector(".overflow");
 
+//disallowed chars
+const noE = 'e';
+const noDot = '.';
+
 //event listener on submit button, so when clicked the following happens:
 subButton.addEventListener("click", function(){
 
@@ -22,22 +26,50 @@ subButton.addEventListener("click", function(){
     let minYValue = parseInt(document.querySelector("#Y-min").value);
     let maxYValue = parseInt(document.querySelector("#Y-max").value);
 
-    if(isNaN(minXValue)||isNaN(maxXValue)||isNaN(minYValue)||isNaN(maxYValue)){
-      log.textContent = "Check input, all fields should be filled";
+    //user input values are grabbed and stored as strings, for checking if they contain disallowed chars
+    let stringMinXValue = document.querySelector("#X-min").value;
+    let stringMaxXValue = document.querySelector("#X-max").value;
+    let stringMinYValue = document.querySelector("#Y-min").value;
+    let stringMaxYValue = document.querySelector("#Y-max").value;
+
+    //disallowing e in input as specified
+    if(stringMaxXValue.includes(noE) || stringMinXValue.includes(noE) || stringMaxYValue.includes(noE) || stringMinYValue.includes(noE)) {
+      log.textContent = "Check input, no fields should contain e";
       //clear any preexisting table
       table.innerHTML = "";
+      //remove tables scroll bars
+      table.style.overflow = "";
+    }
+    //disallowing . in input as specified
+    else if(stringMaxXValue.includes(noDot) || stringMinXValue.includes(noDot) || stringMaxYValue.includes(noDot) || stringMinYValue.includes(noDot)) {
+      log.textContent = "Check input, no fields should contain decimal numbers, only whole numbers";
+      //clear any preexisting table
+      table.innerHTML = "";
+      //remove tables scroll bars
+      table.style.overflow = "";
+    }
+    else if(isNaN(minXValue)||isNaN(maxXValue)||isNaN(minYValue)||isNaN(maxYValue)){
+      log.textContent = "Check input, all fields should be filled with just numbers. You either left a field blank or otherwise entered something which is not a number";
+      //clear any preexisting table
+      table.innerHTML = "";
+      //remove tables scroll bars
+      table.style.overflow = "";
     }
     //if the any mins arent less than their cooresponding max's, print corresponding error message
     else if(minXValue > maxXValue || minYValue > maxYValue) {
       log.textContent = "Check input, min(s) should be less than max(s)";
       //clear any preexisting table
       table.innerHTML = "";
+      //remove tables scroll bars
+      table.style.overflow = "";
     }
     //else if any of the values are out of the range, print corresponding error message
     else if(minXValue < -50 ||minYValue < -50 ||maxXValue > 50 || maxYValue > 50) {
       log.textContent = "Check input, all min values should be greater than or equal to -50 and all max values should be less than or equal to 50";
       //clear any preexisting table
       table.innerHTML = "";
+      //remove tables scroll bars
+      table.style.overflow = "";
     }
     //else, build the table
     else {
