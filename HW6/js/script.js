@@ -10,6 +10,9 @@ Sources: https://www.w3schools.com/
 */
 
 $(document).ready(function () {
+    $.validator.addMethod("noDot", function(value, element){
+      return !(value.includes('.'))
+    }, "decimals are not allowed");
     $("#TableForm").submit(function(x) {
           x.preventDefault();
           createTable();
@@ -17,44 +20,40 @@ $(document).ready(function () {
       rules: {
         "Xmin": {
         required: true,
-        digits: true,
+        noDot: true,
         range: [-50, 50],
         },
         "Xmax": {
           required: true,
-          digits: true,
+          noDot: true,
           range: [-50, 50],
         },
         "Ymin": {
           required: true,
-          digits: true,
+          noDot: true,
           range: [-50, 50]
         },
         "Ymax": {
           required: true,
-          digits: true,
+          noDot: true,
           range: [-50, 50],
         }
       },
       messages: {
         Xmin: {
           required: "Please enter a minimum value as an integer. Must only include numbers.",
-          digits: "Only digits can be input (no decimals)",
           range: "Input number must be between -50 to 50."
         },
         Xmax: {
           required: "Please enter a maximum value as an integer. Must only include numbers.",
-          digits: "Only digits can be input (no decimals)",
           range: "Input number must be between -50 to 50."
         },
         Ymin: {
           required: "Please enter a minimum value as an integer. Must only include numbers.",
-          digits: "Only digits can be input (no decimals)",
           range: "Input number must be between -50 to 50."
         },
         Ymax: {
           required: "Please enter a maximum value as an integer. Must only include numbers.",
-          digits: "Only digits can be input (no decimals)",
           range: "Input number must be between -50 to 50."
         },
       },
