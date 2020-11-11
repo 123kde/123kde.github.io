@@ -1,0 +1,75 @@
+/*
+  Name: Kade Hasenfus
+  Email Address: Kade_Hasenfus@student.uml.edu
+  Affliation: University of Massachusetts Lowell Computer Science Major
+  File: cs.uml.edu/~khasenfu/
+  COMP.4610-201 (91.61) GUI Programming I Assignment: Multiplication table
+  Copyright © October 20th 2020 by Kade Hasenfus. All rights reserved. May be
+  freely copied or excerpted for educational purposes with credit to the author.
+  Sources: https://www.w3schools.com/, https://getbootstrap.com/
+*/
+
+/*styles the body*/
+body {
+  background-color: #130129;
+  color: gray;
+}
+
+/*styles containers*/
+.container {
+  padding-top: 50px;
+  background-color: #2e0a1b;
+  min-width: 70%;
+  max-width: 85%;
+}
+
+/*styles nav*/
+.nav {
+  margin-bottom: 100px;
+}
+
+#messageOut {
+  padding-top: 15px;
+  margin-left: 10%;
+}
+/*styles overflow container which holds table */
+.overflow {
+    max-height: 50vh;
+    min-height: 30vh;
+    margin-top: 50px;
+    /*overflow: scroll;*/
+}
+
+/*styles error messages*/
+.error {
+    color: red;
+}
+
+/*styles table headers*/
+th {
+  width: 2em;
+  background-color: gray;
+}
+
+/*styles table rows*/
+tr {
+  width: 2em;
+  background-color: white;
+}
+
+/*grays the bg of every other column*/
+td:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+/* grays the bg of every other row*/
+tr:nth-child(odd) {
+  background-color: #bfbfbf;
+}
+
+/*puts footer in correct place*/
+footer {
+  bottom:0;
+  padding-bottom: 10px;
+  margin-left: 1%;
+}
