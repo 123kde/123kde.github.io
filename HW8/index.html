@@ -1,0 +1,108 @@
+<!--
+Name: Kade Hasenfus
+Email Address: Kade_Hasenfus@student.uml.edu
+Affliation: University of Massachusetts Lowell Computer Science Major
+File: cs.uml.edu/~khasenfu/
+COMP.4610-201 (91.61) GUI Programming I Assignment: Scrabble
+Copyright © December 10th 2020 by Kade Hasenfus. All rights reserved. May be
+freely copied or excerpted for educational purposes with credit to the author.
+Sources: https://www.w3schools.com/, https://getbootstrap.com/
+-->
+<!DOCTYPE html>
+<html>
+<!-- head with appropriate info -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel = "stylesheet" type = "text/css" href = "css/index.css">
+  <title>
+    GUI Homework 8
+  </title>
+</head>
+<!-- body begins -->
+<body>
+  <div class="container">
+    <!-- nav bar in header section -->
+    <header>
+      <div class="fixed-top">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+          <!-- navbar label -->
+          <a class="navbar-brand" href="#">GUI Homework 8: Scrabble</a>
+
+          <!-- Toggler/collapsibe Button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Navbar links -->
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="https://123kde.github.io/">Go Home</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <!-- container  for input feild-->
+  <div class="container">
+    <img id="Board1" class="boardTile" src="graphics_data/Blank.png">
+    <img id="Board2" class="boardTile" src="graphics_data/Double.png">
+    <img id="Board3" class="boardTile" src="graphics_data/Blank.png">
+    <img id="Board4" class="boardTile" src="graphics_data/Blank.png">
+    <img id="Board5" class="boardTile" src="graphics_data/Blank.png">
+    <img id="Board6" class="boardTile" src="graphics_data/Double.png">
+    <img id="Board7" class="boardTile" src="graphics_data/Blank.png">
+  </div>
+
+  <div id="Rack" class="container">
+
+  </div>
+  <br>
+
+  <div id="gameInfo" class = "container">
+				<div>
+				  	<div class="label">Score:</div>
+				  	<div id="score">0</div>
+				</div>
+				<div>
+				  	<div class="label">Remaining Tiles:</div>
+				  	<div id="remainingTiles">100</div>
+				</div>
+			</div>
+
+      <br>
+
+      <div class="status container" >
+				<button disabled='true' id="nextRound" onClick="nextWord()" class="btn btn-primary">Submit</button>
+				<button id="resetGame" onClick="resetGame()" class="btn btn-primary">Reset</button>
+			</div>
+
+
+      <br>
+      <br>
+      <br>
+
+  <footer>
+    Copyright &copy; 2020 Kade Hasenfus, All rights reserved
+    <br>
+    <a href="mailto:Kade_Hasenfus@student.uml.edu">Kade_Hasenfus@student.uml.edu</a>
+  </footer>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
+  <!-- My js file -->
+
+</body>
+</html>
